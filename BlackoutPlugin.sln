@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackoutPlugin", "BlackoutPlugin.csproj", "{539BC9A5-996A-45FA-97DB-10B903A475AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{539BC9A5-996A-45FA-97DB-10B903A475AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{539BC9A5-996A-45FA-97DB-10B903A475AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{539BC9A5-996A-45FA-97DB-10B903A475AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{539BC9A5-996A-45FA-97DB-10B903A475AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26267C06-4B09-40F8-9589-1E6CCF23B70A}
+	EndGlobalSection
+EndGlobal
