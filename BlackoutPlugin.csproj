@@ -89,15 +89,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlackoutPlugin.cs" />
+    <Compile Include="Commands\BlackoutChance.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="Handlers\MapHandler.cs" />
+    <Compile Include="Handlers\PlayerHandler.cs" />
+    <Compile Include="Handlers\ServerHandler.cs" />
+    <Compile Include="Helpers\VariablesHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="Handlers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
