@@ -14,11 +14,14 @@ namespace BlackoutPlugin.Handlers
     {
         public void OnGeneratorActivated(GeneratorActivatedEventArgs ev)
         {
-            VariablesHelper.GeneratorsActiveCount++;
-            if(VariablesHelper.GeneratorsActiveCount == 3)
+            if (VariablesHelper.BlackoutRound)
             {
-                Cassie.MessageTranslated("GENERATORS ENGAGED, STARTING BACKUP LIGHT MODULE", "Generatory włączone, trwa uruchamianie modułu świateł");
-                Map.TurnOffAllLights(float.MinValue, new[] { ZoneType.Entrance, ZoneType.HeavyContainment, ZoneType.LightContainment, ZoneType.Surface });
+                VariablesHelper.GeneratorsActiveCount++;
+                if (VariablesHelper.GeneratorsActiveCount == 3)
+                {
+                    Cassie.MessageTranslated("GENERATORS ENGAGED, STARTING BACKUP LIGHT MODULE", "Generatory włączone, trwa uruchamianie modułu świateł");
+                    Map.TurnOffAllLights(float.MinValue, new[] { ZoneType.Entrance, ZoneType.HeavyContainment, ZoneType.LightContainment, ZoneType.Surface });
+                }
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿#region Usings
 using BlackoutPlugin.Handlers;
+using BlackoutPlugin.Helpers;
 using Exiled.API.Enums;
 using Exiled.API.Features;
 using System;
@@ -32,10 +33,10 @@ namespace BlackoutPlugin
         public override void OnEnabled()
         {
             Singleton = this;
+            VariablesHelper.BlackoutRound = new Random().Next(1,101) <= Config.ChanceForBlackout;
             playerHandler = new PlayerHandler();
             serverHandler = new ServerHandler(this);
             mapHandler = new MapHandler();
-
             Exiled.Events.Handlers.Server.RoundStarted += serverHandler.OnRoundStarted;
             Exiled.Events.Handlers.Player.ChangingRole += playerHandler.OnChangingRole;
             Exiled.Events.Handlers.Player.StoppingGenerator += playerHandler.OnStoppingGenerator;

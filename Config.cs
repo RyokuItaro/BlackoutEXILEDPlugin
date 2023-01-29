@@ -11,6 +11,6 @@ namespace BlackoutPlugin
     {
         public bool IsEnabled { get; set; } = true;
         public bool Debug { get; set; }
-        public int ChanceForBlackout { get; set; } = 100;
+        public int ChanceForBlackout { get; set; }
     }
 }

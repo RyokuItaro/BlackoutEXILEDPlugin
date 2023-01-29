@@ -9,5 +9,6 @@ namespace BlackoutPlugin.Helpers
     public static class VariablesHelper
     {
         public static int GeneratorsActiveCount = 0;
+        public static bool BlackoutRound;
     }
 }

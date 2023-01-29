@@ -16,30 +16,36 @@ namespace BlackoutPlugin.Handlers
     {
         public void OnChangingRole(ChangingRoleEventArgs ev)
         {
-            switch (ev.NewRole)
+            if (VariablesHelper.BlackoutRound)
             {
-                case RoleTypeId.NtfCaptain:
-                case RoleTypeId.NtfPrivate:
-                case RoleTypeId.NtfSpecialist:
-                case RoleTypeId.NtfSergeant:
-                case RoleTypeId.ChaosConscript:
-                case RoleTypeId.ChaosMarauder:
-                case RoleTypeId.ChaosRepressor:
-                case RoleTypeId.ChaosRifleman:
-                case RoleTypeId.ClassD:
-                case RoleTypeId.Scientist:
-                case RoleTypeId.FacilityGuard:
-                    Timing.CallDelayed(0.1f, () => ev.Player.AddItem(ItemType.Flashlight));
-                    break;
+                switch (ev.NewRole)
+                {
+                    case RoleTypeId.NtfCaptain:
+                    case RoleTypeId.NtfPrivate:
+                    case RoleTypeId.NtfSpecialist:
+                    case RoleTypeId.NtfSergeant:
+                    case RoleTypeId.ChaosConscript:
+                    case RoleTypeId.ChaosMarauder:
+                    case RoleTypeId.ChaosRepressor:
+                    case RoleTypeId.ChaosRifleman:
+                    case RoleTypeId.ClassD:
+                    case RoleTypeId.Scientist:
+                    case RoleTypeId.FacilityGuard:
+                        Timing.CallDelayed(0.1f, () => ev.Player.AddItem(ItemType.Flashlight));
+                        break;
+                }
             }
         }
 
         public void OnStoppingGenerator(StoppingGeneratorEventArgs ev)
         {
-            VariablesHelper.GeneratorsActiveCount--;
-            if(VariablesHelper.GeneratorsActiveCount != 3)
+            if (VariablesHelper.BlackoutRound)
             {
-                Map.TurnOffAllLights(float.MaxValue, new[] { ZoneType.Entrance, ZoneType.HeavyContainment, ZoneType.LightContainment, ZoneType.Surface });
+                VariablesHelper.GeneratorsActiveCount--;
+                if (VariablesHelper.GeneratorsActiveCount != 3)
+                {
+                    Map.TurnOffAllLights(float.MaxValue, new[] { ZoneType.Entrance, ZoneType.HeavyContainment, ZoneType.LightContainment, ZoneType.Surface });
+                }
             }
         }
     }
