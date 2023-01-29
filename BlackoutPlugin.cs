@@ -13,6 +13,8 @@ namespace BlackoutPlugin
 {
     public class BlackoutPlugin : Plugin<Config>
     {
+        public override Version Version => new Version(1, 0, 0);
+        public override string Author => "RyokuItaro";
         public static BlackoutPlugin Singleton;
         public static BlackoutPlugin Instance => Singleton;
         public override PluginPriority Priority { get; } = PluginPriority.Last;
