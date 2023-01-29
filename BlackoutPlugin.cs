@@ -36,7 +36,6 @@ namespace BlackoutPlugin
 
             Exiled.Events.Handlers.Server.RoundStarted += serverHandler.OnRoundStarted;
             Exiled.Events.Handlers.Player.ChangingRole += playerHandler.OnChangingRole;
-            Exiled.Events.Handlers.Player.Joined += playerHandler.OnJoined;
             Exiled.Events.Handlers.Player.StoppingGenerator += playerHandler.OnStoppingGenerator;
             Exiled.Events.Handlers.Map.TurningOffLights += mapHandler.OnTurningOffLights;
             Exiled.Events.Handlers.Map.GeneratorActivated += mapHandler.OnGeneratorActivated;
@@ -47,7 +46,6 @@ namespace BlackoutPlugin
         {
             Exiled.Events.Handlers.Server.RoundStarted -= serverHandler.OnRoundStarted;
             Exiled.Events.Handlers.Player.ChangingRole -= playerHandler.OnChangingRole;
-            Exiled.Events.Handlers.Player.Joined -= playerHandler.OnJoined;
             Exiled.Events.Handlers.Player.StoppingGenerator -= playerHandler.OnStoppingGenerator;
             Exiled.Events.Handlers.Map.TurningOffLights -= mapHandler.OnTurningOffLights;
             Exiled.Events.Handlers.Map.GeneratorActivated -= mapHandler.OnGeneratorActivated;

@@ -34,16 +34,6 @@ namespace BlackoutPlugin.Handlers
             }
         }
 
-        public void OnJoined(JoinedEventArgs ev)
-        {
-            ev.Player.InfoArea &= ~PlayerInfoArea.CustomInfo;
-            ev.Player.InfoArea &= ~PlayerInfoArea.Badge;
-            ev.Player.InfoArea &= ~PlayerInfoArea.UnitName;
-            ev.Player.InfoArea &= ~PlayerInfoArea.Nickname;
-            ev.Player.InfoArea &= ~PlayerInfoArea.PowerStatus;
-            ev.Player.InfoArea &= ~PlayerInfoArea.Role;
-        }
-
         public void OnStoppingGenerator(StoppingGeneratorEventArgs ev)
         {
             VariablesHelper.GeneratorsActiveCount--;
