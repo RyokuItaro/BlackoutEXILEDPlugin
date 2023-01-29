@@ -12,12 +12,6 @@ namespace BlackoutPlugin.Handlers
 {
     internal sealed class MapHandler
     {
-        public void OnTurningOffLights(TurningOffLightsEventArgs ev)
-        {
-            Map.Broadcast(6, "benc");
-            //ev.Duration = float.MaxValue;
-        }
-
         public void OnGeneratorActivated(GeneratorActivatedEventArgs ev)
         {
             VariablesHelper.GeneratorsActiveCount++;
